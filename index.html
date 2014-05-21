@@ -1,5 +1,6 @@
 <html>
 <head>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
     <script>
@@ -20,9 +21,8 @@
                         console.log('My links is' + response.link);
                         console.log('My Username is' + response.username);
                         console.log('My ID is' + response.id);
-                    });
 
-                    
+                    });
 
 
                     /*FB.ui({
@@ -38,11 +38,14 @@
                         link: 'http://www.nytimes.com/2011/06/15/arts/people-argue-just-to-win-scholars-assert.html',
                     });*/
 
-					/*FB.api('/me/likes', function (response) {
-                        for (var i = 0; i < response.length; i++){
-							console.log(response.data.name);
-							}
-                    });*/
+
+                    FB.api('/me/likes', function (response) {
+                        console.log(response)
+                        for (var i = 0; i < response.data.length; i++){
+                            console.log(response.data[i].name);
+                            }
+                    });
+
 					
 					/*FB.api('/me/picture?type=normal', function(response) { // normal/large/squere 
 						var str="<img src="+ response.data.url +">";
