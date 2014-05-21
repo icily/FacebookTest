@@ -1,8 +1,8 @@
-    <html>
-    <head>
-    </head>
-    <body>
-        <script>
+<html>
+<head>
+</head>
+<body>
+    <script>
         window.fbAsyncInit = function () {
             FB.init({
                 appId: '1607480219477262', //api 2.0 nccu web test
@@ -21,6 +21,8 @@
                         console.log('My Username is' + response.username);
                         console.log('My ID is' + response.id);
                     });
+
+                    
 
 
                     /*FB.ui({
@@ -71,9 +73,9 @@
                         if (response.authResponse) { // if user login to your apps right after handle an event
                             window.location.reload();
                         };
-                    }/*, {
+                    }, {
                         scope: 'user_about_me,email,user_location,user_photos,publish_actions,user_birthday,user_likes'
-                    }*/);
+                    });
                 } else {
                     console.log("this isn't logged in to Facebook.");
                     FB.login(function (response) {
@@ -102,5 +104,5 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    </body>
-    </html>
+</body>
+</html>
